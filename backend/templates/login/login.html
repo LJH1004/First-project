@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style type="text/css">
+		body{
+			background-color: #36C1F0;
+		}
+		.head{
+			border: 1px solid black;
+			font-size: 50px;
+			text-align: center;
+		}
+		.main{
+			border:1px solid black;
+			height: 300px;
+			width: 50%;
+			margin: 0 auto;
+			margin-top: 250px;
+			background-color: white;
+		}
+		.public{
+			
+			height: 30px;
+			margin-top: 7px;
+			padding: 15px;
+		}
+		.h{
+			height: 30px;
+			font-size: 30px;
+			color: blue;
+			text-align: center;
+		 }
+		button{
+			height: 30px;
+			width: 80px;
+			background-color: #38D330;
+			margin-top: 10px;
+			border-radius: 5px
+		}
+		#ID, #Password{
+			width: 400px;
+			height: 25px;
+			border-radius: 5px
+		}
+		.button-font{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+<div class="main">
+	<div class="h public">Security First</div>
+	<div class="ID public">
+		<label>이름</label><br>
+		<input type="text" id="ID" >
+	</div>
+	<div class="Password public">
+		<label>비밀번호</label><br>
+		<input type="password" id="Password">
+	</div>
+	<div class="button-font public">
+		<button onclick="click_login()" type="button" class="btn">로그인</button>
+	</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+	function click_login(){
+		var csrf_token = $("#csrf_token").html()
+		var ID =$('#ID').val();
+		var Password=$('#Password').val();
+		console.log("ID ==> ", ID);
+		console.log("Password ==> ", Password);
+		$.post("api_login",{
+			csrfmiddlewaretoken: csrf_token,
+			ID :ID,
+			Password: Password,
+		})
+		  .done(function(data){
+		  	if(data.result=='success'){
+		  		alert('로그인 성공.');
+			}
+		  	else{
+		  		alert('로그인 실패.');
+			}
+
+		  });
+	}
+</script>
+</html>
