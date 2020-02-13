@@ -14,7 +14,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1XZlkoOAy4iaPs6mREPAERz3QzT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -59,10 +63,17 @@
       <option name="presentableId" value="Default" />
       <updated>1581261643008</updated>
       <workItem from="1581261645672" duration="2350000" />
+      <workItem from="1581578338041" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="179" y="400" key="com.intellij.ide.util.TipDialog" timestamp="1581578338272">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="179" y="400" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581578338272" />
   </component>
 </project>
